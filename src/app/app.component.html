@@ -1,0 +1,20 @@
+<main class="bg-dark">
+  <div class="vh-100 d-flex justify-content-center align-items-center flex-column">
+    <form [formGroup]="form">
+      <div class="form-check">
+        <input formControlName="aiModel" value="CHATGPT" class="form-check-input" type="radio" name="aiModel" id="chatGpt" checked>
+        <label class="form-check-label text-light" for="chatGpt">
+          Usar ChatGpt
+        </label>
+      </div>
+      <div class="form-check">
+        <input formControlName="aiModel" value="GPTVISION" class="form-check-input" type="radio" name="aiModel" id="gptVision">
+        <label class="form-check-label text-light" for="gptVision">
+          Usar GPT Vision
+        </label>
+      </div>
+    </form>
+    <button class="btn btn-primary" (click)="askToGpt()">Preguntar a la IA</button>
+    <p class="text-light">{{ response }}</p>
+  </div>
+</main>
