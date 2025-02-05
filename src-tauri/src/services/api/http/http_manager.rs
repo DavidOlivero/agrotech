@@ -5,7 +5,7 @@ pub struct HTTPManager { }
 
 impl HTTPManager {
   pub fn make_request(ai_model: AIModels) -> String {
-    let ai_modules = ai_model.initialize_ai_modules();
+    let ai_modules = ai_model.make_ai_modules();
     let response = AiClient::consume_ai(&*ai_modules.ai_config, &*ai_modules.ai_payload);
 
     response.unwrap_or_else(|err| {

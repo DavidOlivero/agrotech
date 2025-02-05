@@ -1,4 +1,5 @@
-use crate::services::api::traits::{ai_configs::AiConfigTrait, ai_clients::AiClientsTrait, ai_payloads::AiPayloadTrait};
+use crate::services::api::traits::ai_clients::AiClientsTrait;
+use make_ai_model_list::{ AiConfigTrait, AiPayloadTrait };
 use ureq::{self, Error};
 
 pub struct AiClient { }

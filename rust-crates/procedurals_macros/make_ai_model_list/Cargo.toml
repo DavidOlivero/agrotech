@@ -4,3 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+ureq = { version = "3.0.3", features = ["json"] }
+serde_json = "1.0.138"
+dotenv = "0.15.0"

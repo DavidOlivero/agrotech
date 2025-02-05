@@ -31,7 +31,3 @@ pub mod api {
     pub mod http_responses;
   }
 }
-
-pub mod traits {
-  pub mod make_ai_list_derive;
-}

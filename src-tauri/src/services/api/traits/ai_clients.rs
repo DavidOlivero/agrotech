@@ -1,4 +1,4 @@
-use super::{ai_configs::AiConfigTrait, ai_payloads::AiPayloadTrait};
+use make_ai_model_list::{ AiConfigTrait, AiPayloadTrait };
 use ureq::Error;
 
 pub trait AiClientsTrait {
