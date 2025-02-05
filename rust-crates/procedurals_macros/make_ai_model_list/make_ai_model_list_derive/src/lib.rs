@@ -33,6 +33,7 @@ fn impl_make_ai_list_derive(ast: &syn::DeriveInput) -> TokenStream {
       fn initialize_ai_modules(&self) -> AiModules {
         match self {
           #(#name::#variants => {
+            println!("{:?}, {:?}", self, #name::#variants);
             AiModules {
               ai_config: Box::new(#variants::new().unwrap()),
               ai_payload: Box::new(#payload_variant {})

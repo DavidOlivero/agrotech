@@ -1,0 +1,1 @@
+C:\Users\daeno\Documents\Dev\Proyectos\ Tauri\agrotech\rust-crates\procedurals_macros\make_ai_model_list\make_ai_model_list_derive\target\debug\make_ai_model_list_derive.dll: C:\Users\daeno\Documents\Dev\Proyectos\ Tauri\agrotech\rust-crates\procedurals_macros\make_ai_model_list\make_ai_model_list_derive\src\lib.rs

@@ -16,6 +16,7 @@ export class AppComponent {
   })
   async askToGpt() {
     const value = this.form.controls.aiModel.value
+    console.log(value)
     this.response = await invoke<string>('ask_to_ai', { aiModel: value })
   }
 }
