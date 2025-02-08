@@ -10,7 +10,6 @@ pub enum AIModels {
 
 impl AIModels {
   pub fn make_ai_modules(&self) -> AiModules {
-    let test: AIModels = AIModels::CHATGPT;
-    test.initialize_ai_modules()
+    self.initialize_ai_modules()
   }
 }
