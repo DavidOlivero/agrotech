@@ -16,17 +16,8 @@ pub fn make_ai_list_derive(input: TokenStream) -> TokenStream {
 
 fn impl_make_ai_list_derive(ast: &syn::DeriveInput) -> TokenStream {
   let name = &ast.ident;
-  let variants: Vec<&syn::Ident> = if let syn::Data::Enum(data_enum) = &ast.data {
-    data_enum.variants.iter()
-    .map(|value| &value.ident)
-    .collect()
-  } else {
-    panic!("Derive macro only works on enums")
-  };
-
-  let payload_variant: Vec<syn::Ident> = variants.iter()
-    .map(|value| format_ident!("{}PAYLOAD", &value))
-    .collect();
+  let variants = make_variants(ast).unwrap();
+  let payload_variant: Vec<syn::Ident> = make_payload_variants(&variants);
   
   let gen = quote! {
     impl AiModulesTrait for #name {
@@ -44,4 +35,24 @@ fn impl_make_ai_list_derive(ast: &syn::DeriveInput) -> TokenStream {
   };
 
   gen.into()       
+}
+
+fn make_variants(ast: &syn::DeriveInput) -> Option<Vec<&syn::Ident>> {
+  let variants: Vec<&syn::Ident> = if let syn::Data::Enum(data_enum) = &ast.data {
+    data_enum.variants.iter()
+    .map(|value| &value.ident)
+    .collect()
+  } else {
+    return None
+  };
+
+  Some(variants)
+}
+
+fn make_payload_variants(variants: &Vec<&syn::Ident>) -> Vec<syn::Ident> {
+  let payload_variant: Vec<syn::Ident> = variants.iter()
+    .map(|value| format_ident!("{}PAYLOAD", &value))
+    .collect();
+
+  payload_variant
 }
