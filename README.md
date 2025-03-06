@@ -39,27 +39,11 @@ _Luego de eso deberías de ver algo como esto_
 
 ![Ejemplo de la ventana](https://i.imgur.com/xnctciw.png)
 
-_En caso dado de que al ejecutar el proyecto salga un mensaje en la terminal diciendo algo cómo `Warn Waiting for your frontend dev server to start on http://localhost:3000/...` y no pase de allí. Solo ejecuta el frontend aprte ejecutando el comando `ng serve` y luego ejecute de nuevo el comando `pnpm run tauri dev`._
+_En caso dado de que al ejecutar el proyecto salga un mensaje en la terminal diciendo algo cómo `Warn Waiting for your frontend dev server to start on http://localhost:3000/...` y no pase de allí. Solo ejecuta el frontend aprte ejecutando el comando `ng serve` y luego ejecute de nuevo el comando `pnpm run tauri dev`, mientras corre el servidior de angular._
 
 ## Confgurando el proyecto para ejecutar los modelos de IA utilizados ⚙️
 
-_Para ejecutar los modelos de ia, primere debes crearte una cunta en [https://rapidapi.com/](https://rapidapi.com/) y en la lista de inteligenicias artificiales buscar el modelo ChatGPT4, luego en la lista de AI CHATBOTS suscribirse al modelo ChatGPT 3.5. Luego copiar el X-RapidAPI-key y copiarla en el fichero .env. Luego hacer lo mismo con el modelo VISION Chat AI_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
+_Para ejecutar los modelos de ia, primere debes crearte una cunta en [https://rapidapi.com/](https://rapidapi.com/) y en la lista de inteligenicias artificiales buscar el modelo ChatGPT4, luego en la lista de AI CHATBOTS suscríbete al modelo ChatGPT 3.5, así como también, al modelo VISION Chat AI. Luego copia el X-RapidAPI-key de cualquiera de los dos modelos anteriores y pégala en el fichero .env dentro de la carpeta src-tauri._
 
 ## Despliegue 📦
 
