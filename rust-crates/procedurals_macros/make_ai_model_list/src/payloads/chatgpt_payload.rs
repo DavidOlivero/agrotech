@@ -1,5 +1,5 @@
 use serde_json::{Value, json};
-use crate::traits::ai_payloads_trait::AiPayloadTrait;
+use domain::traits::ai_payloads_trait::AiPayloadTrait;
 
 pub struct CHATGPTPAYLOAD { }
 

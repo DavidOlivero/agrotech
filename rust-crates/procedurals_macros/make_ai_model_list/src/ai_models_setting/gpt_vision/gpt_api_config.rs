@@ -1,4 +1,4 @@
-use crate::traits::ai_config_trait::AiConfigTrait;
+use domain::traits::ai_config_trait::AiConfigTrait;
 use crate::utilities::get_dotenvs_vars::return_dotenv_var;
 use std::env;
 

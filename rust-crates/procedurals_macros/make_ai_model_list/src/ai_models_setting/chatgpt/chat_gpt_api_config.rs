@@ -1,4 +1,4 @@
-use crate::traits::ai_config_trait::AiConfigTrait;
+use domain::traits::ai_config_trait::AiConfigTrait;
 use crate::utilities::get_dotenvs_vars::return_dotenv_var;
 use std::env;
 
@@ -10,11 +10,13 @@ pub struct CHATGPT {
 
 impl CHATGPT {
   pub fn new() -> Result<Self, env::VarError> {
-    Ok(Self {
+    let result = Self {
       key: return_dotenv_var("API_KEY")?,
       host: "chatgpt-42.p.rapidapi.com",
       url: "https://chatgpt-42.p.rapidapi.com/gpt4"
-    })
+    };
+
+    Ok(result)
   }
 }
 

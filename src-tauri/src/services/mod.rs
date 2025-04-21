@@ -6,6 +6,7 @@ pub mod api {
   pub mod client {
     pub mod client;
   }
+
   pub mod traits {
     pub mod ai_clients;
   }

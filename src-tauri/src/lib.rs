@@ -1,11 +1,9 @@
 pub mod services;
-pub mod utilities;
 
 use services::{ ai_model::models_manager::AIModels, api::http::http_manager::HTTPManager };
 
 #[tauri::command]
 async fn ask_to_ai(ai_model: AIModels) -> String {
-  // println!("{:?}", ai_model);
   HTTPManager::make_request(ai_model)
 }
 
